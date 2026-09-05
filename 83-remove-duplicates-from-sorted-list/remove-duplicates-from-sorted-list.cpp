@@ -16,15 +16,15 @@ public:
         }
         ListNode* temp1=head;
         ListNode* temp2=head->next;
-        while(temp1!=nullptr && temp2!=nullptr){
-             if(temp1->val==temp2->val){
+        while(temp2){
+            if(temp1->val==temp2->val){
                 temp1->next=temp2->next;
                 temp2=temp2->next;
-             }
-             else{
+            }
+            else{
                 temp1=temp1->next;
                 temp2=temp2->next;
-             }
+            }
         }
         return head;
     }
